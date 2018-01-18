@@ -38,6 +38,7 @@ Place script in directory that suits your OS:
 
 If needed, *set file permissions to allow script execution:*  
     `chmod +x awb.py`  
+    
 ---
 I was asking about this in r/Gimp  
 https://www.reddit.com/r/GIMP/comments/7qw7eb/how_do_you_call_automatic_white_balance_from_a/  
