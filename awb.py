@@ -86,7 +86,7 @@ register (
         "<Image>/Filters/Enhance/Auto White Balance",  ##  menu location
         "*",             ##  image types
         [                            ##  default, (min, max, step)
-          (PF_SLIDER, "hi",  "highlight clip", 4, (0, 50, 1)),
+          (PF_SLIDER, "hi",  "highlight clip", 6, (0, 50, 1)),
           (PF_SLIDER, "lo",  "shadow clip", 4, (0, 50, 1)),
         ],           ##  parameters
         [],         ##  results
