@@ -18,6 +18,7 @@
 """=========================================================="""
 from gimpfu import *
 
+##  simple clamping function with range 0 - 255
 def minmax( x ):
   if x < 0:  x  = 0
   elif x > 255:  x  = 255
@@ -75,31 +76,31 @@ def eawb( img, draw, hi, blow, lo, burn, soft ):
 
   if loR > 0:  ##  Red shadows
     if burn:  loR  = loR //1.2
-    else:    loR -= 1
+    else:     loR -= 1
 
   if hiR < 255:  ##  Red highlights
     if blow:  hiR  = 255 -(255 -hiR) //1.5
-    else:    hiR += 1
+    else:     hiR += 1
 
   if loG > 0:  ##  Green shadows
     if burn:  loG  = loG //1.2
-    else:    loG -= 1
+    else:     loG -= 1
 
   if hiG < 255:  ##  Green highlights
     if blow:  hiG  = 255 -(255 -hiG) //1.5
-    else:    hiG += 1
+    else:     hiG += 1
 
   if loB > 0:  ##  Blue shadows
     if burn:  loB  = loB //1.2
-    else:    loB -= 1
+    else:     loB -= 1
 
   if hiB < 255:  ##  Blue highlights
     if blow:  hiB  =  255 -(255 -hiB) //1.5
-    else:    hiB += 1
+    else:     hiB += 1
 
   if soft:  ##  soften tint change applied
     avgLo  = (loR +loG +loB) /3
-    avgHi  = (hiR + hiG +hiB) /3
+    avgHi  = (hiR +hiG +hiB) /3
 
     loR -= abs(loR -avgLo) /2  ##  Red shadows
     loR  = minmax( loR )
@@ -144,7 +145,7 @@ register (
           (PF_TOGGLE, "blow", "Reduce blown Highlights", 1 ),
           (PF_SLIDER, "lo",  "Shadow Clip", 30, (0, 50, 1) ),
           (PF_TOGGLE, "burn", "Reduce burnt Shadows", 1 ),
-          (PF_TOGGLE, "soft", "Soften tint applied", 1 ),
+          (PF_TOGGLE, "soft", "Soft tint", 1 ),
         ],           ##  parameters
         [],         ##  results
         eawb )     ##  name of function
