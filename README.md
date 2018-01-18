@@ -18,7 +18,7 @@ and decide where it needs more: highlights or shadows.
 
 I would venture a guess highlights may need more to be consistant.  
 6 or 7 here may be a better choice.  'Cuz hey, it's a new script,  
-so I may tweak it a little bit after some testing.  
+so I may tweak it, if need be, after some testing.  
 
 ![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
