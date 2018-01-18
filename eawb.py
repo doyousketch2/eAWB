@@ -141,9 +141,9 @@ register (
         "<Image>/Filters/Enhance/Enhanced Auto White Balance",  ##  menu location
         "*",             ##  image types
         [                            ##  default, (min, max, step)
-          (PF_SLIDER, "hi",  "Highlight Clip", 6, (0, 50, 1) ),
+          (PF_SLIDER, "hi",  "Highlight Clip", 7, (0, 50, 1) ),
           (PF_TOGGLE, "blow", "Reduce blown Highlights", 1 ),
-          (PF_SLIDER, "lo",  "Shadow Clip", 30, (0, 50, 1) ),
+          (PF_SLIDER, "lo",  "Shadow Clip", 10, (0, 50, 1) ),
           (PF_TOGGLE, "burn", "Reduce burnt Shadows", 1 ),
           (PF_TOGGLE, "soft", "Soft tint", 1 ),
         ],           ##  parameters
