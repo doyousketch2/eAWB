@@ -42,7 +42,7 @@ If needed, *set file permissions to allow script execution:*
 ---
 I was asking about this in r/Gimp  
 https://www.reddit.com/r/GIMP/comments/7qw7eb/how_do_you_call_automatic_white_balance_from_a/  
-and was informed someone else was nearly simultaneously, asking about it, on StackOverflow  
+and was informed someone else was, nearly simultaneously, asking about it on StackOverflow  
 https://stackoverflow.com/questions/48268068/how-do-i-do-the-equivalent-of-gimps-colors-auto-white-balance-in-python-fu  
 
 Fortuitous event, for it led to a suitable answer.
