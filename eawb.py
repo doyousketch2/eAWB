@@ -5,20 +5,20 @@
 """=========================================================="""
 ##  Place script in directory that suits your OS:
 ##
-##	/home/yourname/.gimp-2.8/plug-ins
-##	/usr/share/gimp/2.0/plug-ins
+##  /home/yourname/.gimp-2.8/plug-ins
+##  /usr/share/gimp/2.0/plug-ins
 ##  ~/Library/Application/Support/GIMP/2.8/plug-ins
 ##
-##	C:\Users\yourname\.gimp-2.8\plug-ins
-##	C:\Program Files\GIMP 2\share\gimp\2.0\plug-ins
-##	C:\Documents and Settings\yourname\.gimp-2.8\plug-ins
+##  C:\Users\yourname\.gimp-2.8\plug-ins
+##  C:\Program Files\GIMP 2\share\gimp\2.0\plug-ins
+##  C:\Documents and Settings\yourname\.gimp-2.8\plug-ins
 ##
 ##  If needed, set file permissions to allow script execution
 ##  chmod +x awb.py
 """=========================================================="""
 from gimpfu import *
 
-def awb( img, draw, hi, lo ):
+def eawb( img, draw, hi, lo ):
   ##  ( drawable,  channel,  start-range,  end-range )  ( 0 <= range <= 255 )
   ##  channel = { HISTOGRAM-VALUE (0), HISTOGRAM-RED (1), HISTOGRAM-GREEN (2),
   ##              HISTOGRAM-BLUE (3), HISTOGRAM-ALPHA (4), HISTOGRAM-RGB (5) }
@@ -77,19 +77,19 @@ def awb( img, draw, hi, lo ):
 
 
 register (
-        "awb",                  ##  commandline name
-        "Auto White Balance",  ##  blurb
+        "eawb",                 ##  commandline name
+        "Enhanced Auto White Balance",  ##  blurb
         "Chops top & bottom off each RGB channel",  ##  help
         "Doyousketch2",      ##  author
         "GNU GPL v3",       ##  copyright
         "2018",            ##  date
-        "<Image>/Filters/Enhance/Auto White Balance",  ##  menu location
+        "<Image>/Filters/Enhance/c Auto White Balance",  ##  menu location
         "*",             ##  image types
         [                            ##  default, (min, max, step)
-          (PF_SLIDER, "hi",  "highlight clip", 6, (0, 50, 1)),
-          (PF_SLIDER, "lo",  "shadow clip", 4, (0, 50, 1)),
+          (PF_SLIDER, "hi",  "Highlight Clip", 6, (0, 50, 1)),
+          (PF_SLIDER, "lo",  "Shadow Clip", 10, (0, 50, 1)),
         ],           ##  parameters
         [],         ##  results
-        awb )      ##  name of function
+        eawb )     ##  name of function
 
 main()
