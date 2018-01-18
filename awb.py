@@ -39,30 +39,30 @@ def awb( img, draw, hi, lo ):
   ##  get full red percentile, then narrow in on this histogram channel
   _, _, _, _, _, prcntR  = pdb .gimp_histogram( draw, 1, loR, hiR )
   while prcntR > amt_lo:
-    loR += 1  ##  increase red low end 'till percent is within clip amount
+    loR += 1  ##  increase red low end 'till percent is within lo clip amount
     _, _, _, _, _, prcntR  = pdb .gimp_histogram( draw, 1, loR, hiR )
   while prcntR > amt_hi:
-    hiR -= 1  ##  decrease red high end 'till percent is within clip amount
+    hiR -= 1  ##  decrease red high end 'till percent is within hi clip amount
     _, _, _, _, _, prcntR  = pdb .gimp_histogram( draw, 1, loR, hiR )
 
 
   ##  get full green percentile, then narrow in on this histogram channel
   _, _, _, _, _, prcntG  = pdb .gimp_histogram( draw, 2, loG, hiG )
   while prcntG > amt_lo:
-    loG += 1  ##  increase green low end 'till percent is within clip amount
+    loG += 1  ##  increase green low end 'till percent is within lo clip amount
     _, _, _, _, _, prcntG  = pdb .gimp_histogram( draw, 2, loG, hiG )
   while prcntG > amt_hi:
-    hiG -= 1  ##  decrease green high end 'till percent is within clip amount
+    hiG -= 1  ##  decrease green high end 'till percent is within hi clip amount
     _, _, _, _, _, prcntG  = pdb .gimp_histogram( draw, 2, loG, hiG )
 
 
   ##  get full blue percentile, then narrow in on this histogram channel
   _, _, _, _, _, prcntB  = pdb .gimp_histogram( draw, 3, loB, hiB )
   while prcntB > amt_lo:
-    loB += 1  ##  increase blue low end 'till percent is within clip amount
+    loB += 1  ##  increase blue low end 'till percent is within lo clip amount
     _, _, _, _, _, prcntB  = pdb .gimp_histogram( draw, 3, loB, hiB )
   while prcntB > amt_hi:
-    hiB -= 1  ##  decrease blue high end 'till percent is within clip amount
+    hiB -= 1  ##  decrease blue high end 'till percent is within hi clip amount
     _, _, _, _, _, prcntB  = pdb .gimp_histogram( draw, 3, loB, hiB )
 
   ##  apply RGB levels
@@ -88,8 +88,8 @@ register (
         [                            ##  default, (min, max, step)
           (PF_SLIDER, "hi",  "highlight clip", 4, (0, 50, 1)),
           (PF_SLIDER, "lo",  "shadow clip", 4, (0, 50, 1)),
-        ],            ##  parameters
-        [],          ##  results
-        awb )       ##  name of function
+        ],           ##  parameters
+        [],         ##  results
+        awb )      ##  name of function
 
 main()
