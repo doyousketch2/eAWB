@@ -31,7 +31,7 @@ and leave the highlights alone.  Or vice-versa.  Your choice, it's enhanced.
 This will, of course, depend upon your camera, and the lighting,  
 So you will have better results with some pix than others.  
 
-You can crank it all the way up to 50 if you like, which will bost the contrast, 
+You can crank it all the way up to 50 if you like, which will bost the contrast,  
 but discard pixels that may have otherwise contributed to the dynamic range.  
 
 If you wanna do that, I'd suggest sliding shadows up to 50  
