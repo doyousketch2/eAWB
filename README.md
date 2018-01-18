@@ -6,7 +6,8 @@ Filters > Enhance > Auto White Balance
 
 Enhanced, because you can specify the amount you wish to clip.  
 
-4 seems to be a good amount, but you can set it higher or lower,  
+somewhere around 5 seems to be a good amount,  
+but you can set it higher or lower,  
 if you prefer more, or less, filtering.  
 
 *Some images may need more aggressive filtering.*  
@@ -16,7 +17,8 @@ look at histogram for each of the colors,
 and decide where it needs more: highlights or shadows.  
 
 I would venture a guess highlights may need more to be consistant.  
-6 or 7 here may be a better choice.  I may set this as the default.  
+6 or 7 here may be a better choice.  It's a brand-new script, 
+so I may tweak it a little bit after some testing.  
 
 ![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
