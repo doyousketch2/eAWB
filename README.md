@@ -15,7 +15,7 @@ and leave the highlights alone. Or vice-versa.  Your choice, it's enhanced.
 You can also call it from another script,  
 which is a huge advantage over the one that was built in.  
 
-in Python, aka python-fu:
-`pdb.python_fu_awb(1, image, layer, hi, lo )`
-in Scheme, aka script-fu:
-`(python-fu-awb (1 image layer hi lo))`
+in Python, aka python-fu:  
+`pdb.python_fu_awb(1, image, layer, hi, lo )`  
+in Scheme, aka script-fu:  
+`(python-fu-awb (1 image layer hi lo))`  
