@@ -24,6 +24,7 @@ def minmax( x ):
   elif x > 255:  x  = 255
   return x
 
+
 def eawb( img, draw, hi, blow, lo, burn, soft ):
   ##  ( drawable,  channel,  start-range,  end-range )  ( 0 <= range <= 255 )
   ##  channel = { HISTOGRAM-VALUE (0), HISTOGRAM-RED (1), HISTOGRAM-GREEN (2),
@@ -139,15 +140,15 @@ register (
         "GNU GPL v3",       ##  copyright
         "2018",            ##  date
         "<Image>/Filters/Enhance/Enhanced Auto White Balance",  ##  menu location
-        "*",             ##  image types
-        [                            ##  default, (min, max, step)
+        "RGB*",          ##  image types
+        [               ## var, gui label, default, (min, max, step)
           (PF_SLIDER, "hi",  "Highlight Clip", 7, (0, 50, 1) ),
           (PF_TOGGLE, "blow", "Reduce blown Highlights", 1 ),
           (PF_SLIDER, "lo",  "Shadow Clip", 10, (0, 50, 1) ),
           (PF_TOGGLE, "burn", "Reduce burnt Shadows", 1 ),
           (PF_TOGGLE, "soft", "Soft tint", 1 ),
-        ],           ##  parameters
-        [],         ##  results
-        eawb )     ##  name of function
+        ],        ##  parameters
+        [],      ##  results
+        eawb )  ##  name of function
 
 main()
