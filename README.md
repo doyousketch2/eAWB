@@ -72,8 +72,12 @@ Place script in directory that suits your OS:
 If needed, *set file permissions to allow script execution:*  
     `chmod +x awb.py`  
 
-If you have any previous versions of this script, awb.py  
+If you have any previous versions of the script, awb.py  
 discard it, and replace with this updated eawb.py  
+
+I mean, you can keep 'em both in there if you really want, 
+but you'll have 2 menu entries, and the other doesn't have the primo toggle buttons.  
+
 ---
 I was asking about this in r/Gimp  
 https://www.reddit.com/r/GIMP/comments/7qw7eb/how_do_you_call_automatic_white_balance_from_a/  
