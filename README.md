@@ -11,9 +11,9 @@ if you prefer more, or less, filtering.
 
 *Some images may need more aggressive filtering.*  
 
-If the color appears *off*, Undo,  
+*If the color appears off*, Undo,  
 look at histogram for each of the colors,  
-and decide if it needs more in the highlights or the shadows.  
+and decide where it needs more: highlights or shadows.  
 
 ![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
