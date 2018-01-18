@@ -12,7 +12,7 @@ if you prefer more, or less, filtering.
 
 ![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
-*Some images may need more aggressive filtering.*  
+*Some images may need more aggressive filtering than others.*  
 
 *If the color appears off*, Undo,  
 look at histogram for each of the colors,  
@@ -29,7 +29,12 @@ In this case, you can specify that you prefer clipping more from the shadows,
 and leave the highlights alone.  Or vice-versa.  Your choice, it's enhanced.  
 
 This will, of course, depend upon your camera, and the lighting,  
-So you will have better results with some pix than others.  
+So you may have better results with some pix than others.  
+
+It might not cure images that have color bleeding in from another light source.  
+Can't promise any miricles with this plugin, but it may help.  
+I've had good results with the test images I've thrown at it.  
+YMMV, but lemme know if you like it.  You can find me on Twitter @Doyousketch2.  
 
 You can crank it all the way up to 50 if you like, which will boost the contrast,  
 but discard pixels that may have otherwise contributed to the dynamic range.  
@@ -42,10 +47,10 @@ You can also call it from another script,
 which is a huge advantage over the one that was built in.  
 
 from a Python plug-in, *aka* **python-fu**:  
-`pdb.python_fu_awb(1, image, layer, hi, lo)`  
+`pdb.python_fu_awb(1, image, layer, hi, blow, lo, burn)`  
 
 from a Scheme script, *aka* **script-fu**:  
-`(python-fu-awb 1 image layer hi lo)`  
+`(python-fu-awb 1 image layer hi blow lo burn)`  
 
 ---
 
