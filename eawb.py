@@ -18,13 +18,14 @@
 """=========================================================="""
 from gimpfu import *
 
-def eawb( img, draw, hi, lo ):
+def eawb( img, draw, hi, blow, lo, burn ):
   ##  ( drawable,  channel,  start-range,  end-range )  ( 0 <= range <= 255 )
   ##  channel = { HISTOGRAM-VALUE (0), HISTOGRAM-RED (1), HISTOGRAM-GREEN (2),
   ##              HISTOGRAM-BLUE (3), HISTOGRAM-ALPHA (4), HISTOGRAM-RGB (5) }
 
   ## group this entire procedure within one undo command
   pdb .gimp_image_undo_group_start( img )
+
   ##  determine low and high clipping amounts
   amt_lo  = 1.0 -lo /1000
   amt_hi  = amt_lo -hi /1000
@@ -65,13 +66,31 @@ def eawb( img, draw, hi, lo ):
     hiB -= 1  ##  decrease blue high end 'till percent is within hi clip amount
     _, _, _, _, _, prcntB  = pdb .gimp_histogram( draw, 3, loB, hiB )
 
-  ##  back off 1 bit so we don't overshoot our target.
-  if loR > 0:  loR -= 1      ##  R
-  if hiR < 255:  hiR += 1
-  if loR > 0:  loR -= 1      ##  G
-  if hiR < 255:  hiR += 1
-  if loR > 0:  loR -= 1      ##  B
-  if hiR < 255:  hiR += 1
+  ##  back off a bit so we don't overshoot our target.
+
+  if loR > 0:  ##  Red shadows
+    if elo:  loR  = loR //2
+    else:    loR -= 1
+
+  if hiR < 255:  ##  Red highlights
+    if ehi:  hiR  = 255 -(255 -hiR) //2
+    else:    hiR += 1
+
+  if loG > 0:  ##  Green shadows
+    if elo:  loG  = loG //2
+    else:    loG -= 1
+
+  if hiG < 255:  ##  Green highlights
+    if ehi:  hiG  = 255 -(255 -hiG) //2
+    else:    hiG += 1
+
+  if loB > 0:  ##  Blue shadows
+    if elo:  loB  = loB //2
+    else:    loB -= 1
+
+  if hiB < 255:  ##  Blue highlights
+    if ehi:  hiB  =  255 -(255 -hiB) //2
+    else:    hiB += 1
 
   ##  apply RGB levels
   ##       ( draw, chan, lo-in, hi-in, gamma, lo-out, hi-out)
@@ -91,11 +110,13 @@ register (
         "Doyousketch2",      ##  author
         "GNU GPL v3",       ##  copyright
         "2018",            ##  date
-        "<Image>/Filters/Enhance/Enhance Auto White Balance",  ##  menu location
+        "<Image>/Filters/Enhance/Enhanced Auto White Balance",  ##  menu location
         "*",             ##  image types
         [                            ##  default, (min, max, step)
-          (PF_SLIDER, "hi",  "Highlight Clip", 6, (0, 50, 1)),
-          (PF_SLIDER, "lo",  "Shadow Clip", 10, (0, 50, 1)),
+          (PF_SLIDER, "hi",  "Highlight Clip", 6, (0, 50, 1) ),
+          (PF_TOGGLE, "blow", "Reduce blown Highlights", 0 ),
+          (PF_SLIDER, "lo",  "Shadow Clip", 10, (0, 50, 1) ),
+          (PF_TOGGLE, "burn", "Reduce burnt Shadows", 0 ),
         ],           ##  parameters
         [],         ##  results
         eawb )     ##  name of function
