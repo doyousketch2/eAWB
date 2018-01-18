@@ -15,6 +15,9 @@ if you prefer more, or less, filtering.
 look at histogram for each of the colors,  
 and decide where it needs more: highlights or shadows.  
 
+I would venture a guess highlights may need more to be consistant.  
+6 or 7 here may be a better choice.  I may set this as the default.  
+
 ![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
 When you open your histogram and look at where the ranges are,  
