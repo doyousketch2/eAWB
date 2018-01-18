@@ -65,6 +65,14 @@ def eawb( img, draw, hi, lo ):
     hiB -= 1  ##  decrease blue high end 'till percent is within hi clip amount
     _, _, _, _, _, prcntB  = pdb .gimp_histogram( draw, 3, loB, hiB )
 
+  ##  back off 1 bit so we don't overshoot our target.
+  if loR > 0:  loR -= 1      ##  R
+  if hiR < 255:  hiR += 1
+  if loR > 0:  loR -= 1      ##  G
+  if hiR < 255:  hiR += 1
+  if loR > 0:  loR -= 1      ##  B
+  if hiR < 255:  hiR += 1
+
   ##  apply RGB levels
   ##       ( draw, chan, lo-in, hi-in, gamma, lo-out, hi-out)
   pdb .gimp_levels( draw, 1, loR, hiR, 1.0, 0, 255 )
@@ -83,7 +91,7 @@ register (
         "Doyousketch2",      ##  author
         "GNU GPL v3",       ##  copyright
         "2018",            ##  date
-        "<Image>/Filters/Enhance/c Auto White Balance",  ##  menu location
+        "<Image>/Filters/Enhance/Enhance Auto White Balance",  ##  menu location
         "*",             ##  image types
         [                            ##  default, (min, max, step)
           (PF_SLIDER, "hi",  "Highlight Clip", 6, (0, 50, 1)),
