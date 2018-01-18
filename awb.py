@@ -32,6 +32,10 @@ def awb( img, draw, hi, lo ):
   loR, loG, loB  = 0, 0, 0
   hiR, hiG, hiB  = 255, 255, 255
 
+  ##  _,  are unused variables.  We only need "percentile"
+  ##  which is the 6th value returned from pdb.gimp_histogram()
+  ##  so we just skip the first 5 values with 5 blank spaces.
+
   ##  get full red percentile, then narrow in on this histogram channel
   _, _, _, _, _, prcntR  = pdb .gimp_histogram( draw, 1, loR, hiR )
   while prcntR > amt_lo:
