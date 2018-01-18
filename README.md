@@ -14,9 +14,7 @@ if you prefer more, or less, filtering.
 
 *Some images may need more aggressive filtering than others.*  
 
-*If the color appears off*, Undo,  
-look at histogram for each of the colors,  
-and decide if it needs more in the highlights or shadows.  
+*If the color appears off*, Undo & try Highlight Clip 10 instead.   
 
 Eyes are more sensitive to light regions than shadows, so  
 I would venture a guess highlights may need tweaking to get good results.  
@@ -36,15 +34,20 @@ Can't promise any miricles with this plugin, but it may help.
 I've had good results with the test images I've thrown at it.  
 YMMV, but lemme know if you like it.  You can find me on Twitter @Doyousketch2.  
 
-You can crank it all the way up to 50 if you like, which will boost the contrast,  
-but discard pixels that may have otherwise contributed to the dynamic range.  
+It's possible to crank it all the way up to 50 if you like,  
+which will boost the contrast, but discard pixels  
+that may have otherwise contributed to the dynamic range.  
 
 If you wanna do that, I'd suggest sliding shadows up to 50  
-and leaving the highlights at 6 or so.  This gives a bold look,  
+and leaving the highlights at 7 or so.  This gives a bold look,  
 but keeps enough detail in the scene to be pleasing to the eye.  
 
-You can also call it from another script,  
-which is a huge advantage over the one that was built in.  
+Turning off the blown highlight and burnt shadow protection is allowed.  
+The results are more drastic, and if that's what you're going for,  
+by all means, try it.  But for everyday use, I'd recommend you keep it on.  
+
+You can also call eawb.py from another script,  
+which is a huge advantage over the awb that was built in.  
 
 from a Python plug-in, *aka* **python-fu**:  
 `pdb.python_fu_awb(1, image, layer, hi, blow, lo, burn)`  
