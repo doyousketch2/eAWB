@@ -75,7 +75,7 @@ If needed, *set file permissions to allow script execution:*
 If you have any previous versions of the script, awb.py  
 discard it, and replace with this updated eawb.py  
 
-I mean, you can keep 'em both in there if you really want, 
+I mean, you can keep 'em both in there if you really want,  
 but you'll have 2 menu entries, and the other doesn't have the primo toggle buttons.  
 
 ---
