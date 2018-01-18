@@ -1,5 +1,5 @@
-# awb.py
-Enhanced Auto White Balance for GIMP
+**awb.py**
+Enhanced **A**uto **W**hite **B**alance for GIMP
 
 ---
 Enhanced, because you can specify the amount you wish to clip.  
