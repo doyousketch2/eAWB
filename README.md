@@ -35,7 +35,7 @@ You can crank it all the way up to 50 if you like, which will boost the contrast
 but discard pixels that may have otherwise contributed to the dynamic range.  
 
 If you wanna do that, I'd suggest sliding shadows up to 50  
-and leaving the highlights at 7 or so.  This gives a bold look,  
+and leaving the highlights at 6 or so.  This gives a bold look,  
 but keeps enough detail in the scene to be pleasing to the eye.  
 
 You can also call it from another script,  
