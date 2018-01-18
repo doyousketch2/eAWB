@@ -14,7 +14,8 @@ if you prefer more, or less, filtering.
 
 *Some images may need more aggressive filtering than others.*  
 
-*If the color appears off:* Undo, then try *Highlight Clip 10* instead.   
+*If the color appears off:* 
+Undo, then try *Highlight Clip 10* , and uncheck *Soften tint applied*.   
 
 Eyes are more sensitive to light regions than shadows, so  
 I would venture a guess highlights may need tweaking to get good results.  
