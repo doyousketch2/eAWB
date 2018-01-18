@@ -1,4 +1,4 @@
-**awb.py**
+**awb.py**  
 Enhanced **A**uto **W**hite **B**alance for GIMP
 
 ---
