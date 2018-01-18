@@ -1,10 +1,14 @@
 **awb.py**  
-Enhanced **A**uto **W**hite **B**alance for GIMP
+Enhanced **A**uto **W**hite **B**alance for GIMP  
 
 ---
+
 Enhanced, because you can specify the amount you wish to clip.  
+
 4 seems to be a good amount, but you can set it higher or lower,  
-if you need more or less filtering.  
+if you prefer more, or less, filtering.  
+
+![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
 When you open your histogram and look at where the ranges are,  
 you may notice an image has highlights, but no shadows.  
