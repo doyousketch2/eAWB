@@ -1,6 +1,6 @@
 **eawb.py**  
 **E**nhanced **A**uto **W**hite **B**alance for GIMP  
-Filters > *Enhance* > Enhanced Auto White Balance  
+Filters >> *Enhance* >> Enhanced Auto White Balance  
 
 ---
 
