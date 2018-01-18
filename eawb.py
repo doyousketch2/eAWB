@@ -18,7 +18,12 @@
 """=========================================================="""
 from gimpfu import *
 
-def eawb( img, draw, hi, blow, lo, burn ):
+def minmax( x ):
+  if x < 0:  x  = 0
+  elif x > 255:  x  = 255
+  return x
+
+def eawb( img, draw, hi, blow, lo, burn, soft ):
   ##  ( drawable,  channel,  start-range,  end-range )  ( 0 <= range <= 255 )
   ##  channel = { HISTOGRAM-VALUE (0), HISTOGRAM-RED (1), HISTOGRAM-GREEN (2),
   ##              HISTOGRAM-BLUE (3), HISTOGRAM-ALPHA (4), HISTOGRAM-RGB (5) }
@@ -92,6 +97,28 @@ def eawb( img, draw, hi, blow, lo, burn ):
     if blow:  hiB  =  255 -(255 -hiB) //1.5
     else:    hiB += 1
 
+  if soft:  ##  soften tint change applied
+    avgLo  = (loR +loG +loB) /3
+    avgHi  = (hiR + hiG +hiB) /3
+
+    loR -= abs(loR -avgLo) /2  ##  Red shadows
+    loR  = minmax( loR )
+
+    hiR += abs(hiR -avgHi) /2  ##  Red highlights
+    hiR  = minmax( hiR )
+
+    loG -= abs(loG -avgLo) /2  ##  Green shadows
+    loG  = minmax( loG )
+
+    hiG += abs(hiG -avgHi) /2  ##  Green highlights
+    hiG  = minmax( hiG )
+
+    loB -= abs(loB -avgLo) /2  ##  Blue shadows
+    loB  = minmax( loB )
+
+    hiB += abs(hiB -avgHi) /2  ##  Blue highlights
+    hiB  = minmax( hiB )
+
   ##  apply RGB levels
   ##       ( draw, chan, lo-in, hi-in, gamma, lo-out, hi-out)
   pdb .gimp_levels( draw, 1, loR, hiR, 1.0, 0, 255 )
@@ -117,6 +144,7 @@ register (
           (PF_TOGGLE, "blow", "Reduce blown Highlights", 1 ),
           (PF_SLIDER, "lo",  "Shadow Clip", 30, (0, 50, 1) ),
           (PF_TOGGLE, "burn", "Reduce burnt Shadows", 1 ),
+          (PF_TOGGLE, "soft", "Soften tint applied", 1 ),
         ],           ##  parameters
         [],         ##  results
         eawb )     ##  name of function
