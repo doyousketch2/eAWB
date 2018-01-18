@@ -18,7 +18,7 @@
 """=========================================================="""
 from gimpfu import *
 
-def awb( img, draw, hi_amt, lo_amt ):
+def awb( img, draw, hi, lo ):
   ##  ( drawable,  channel,  start-range,  end-range )  ( 0 <= range <= 255 )
   ##  channel = { HISTOGRAM-VALUE (0), HISTOGRAM-RED (1), HISTOGRAM-GREEN (2),
   ##              HISTOGRAM-BLUE (3), HISTOGRAM-ALPHA (4), HISTOGRAM-RGB (5) }
@@ -26,8 +26,8 @@ def awb( img, draw, hi_amt, lo_amt ):
   ## group this entire procedure within one undo command
   pdb .gimp_image_undo_group_start( img )
   ##  determine low and high clipping amounts
-  amt_lo  = 1.0 -lo_amt /1000
-  amt_hi  = amt_lo -hi_amt /1000
+  amt_lo  = 1.0 -lo /1000
+  amt_hi  = amt_lo -hi /1000
 
   loR, loG, loB  = 0, 0, 0
   hiR, hiG, hiB  = 255, 255, 255
@@ -81,9 +81,9 @@ register (
         "2018",            ##  date
         "<Image>/Filters/Enhance/Auto White Balance",  ##  menu location
         "*",             ##  image types
-        [                                 ##  default, (min, max, step)
-          (PF_SLIDER, "hi_amount",  "highlight clip", 4, (0, 50, 1)),
-          (PF_SLIDER, "lo_amount",  "shadow clip", 4, (0, 50, 1)),
+        [                            ##  default, (min, max, step)
+          (PF_SLIDER, "hi",  "highlight clip", 4, (0, 50, 1)),
+          (PF_SLIDER, "lo",  "shadow clip", 4, (0, 50, 1)),
         ],            ##  parameters
         [],          ##  results
         awb )       ##  name of function
