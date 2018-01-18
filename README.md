@@ -10,7 +10,7 @@ somewhere around 5 seems to be a good amount,
 but you can set it higher or lower,  
 if you prefer more, or less, filtering.  
 
-![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
+![image](https://pbs.twimg.com/media/DT16yZaWAAAfsw6?format=jpg)  
 
 *Some images may need more aggressive filtering than others.*  
 
