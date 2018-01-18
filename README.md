@@ -50,10 +50,10 @@ You can also call eawb.py from another script,
 which is a huge advantage over the awb that was built in.  
 
 from a Python plug-in, *aka* **python-fu**:  
-`pdb.python_fu_awb(1, image, layer, hi, blow, lo, burn)`  
+`pdb.python_fu_awb(1, image, layer, hi, blow, lo, burn, soft)`  
 
 from a Scheme script, *aka* **script-fu**:  
-`(python-fu-awb 1 image layer hi blow lo burn)`  
+`(python-fu-awb 1 image layer hi blow lo burn soft)`  
 
 ---
 
