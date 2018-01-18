@@ -10,6 +10,8 @@ somewhere around 5 seems to be a good amount,
 but you can set it higher or lower,  
 if you prefer more, or less, filtering.  
 
+![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
+
 *Some images may need more aggressive filtering.*  
 
 *If the color appears off*, Undo,  
@@ -19,8 +21,6 @@ and decide where it needs more: highlights or shadows.
 I would venture a guess highlights may need more to be consistant.  
 6 or 7 here may be a better choice.  'Cuz hey, it's a new script,  
 so I may tweak it, if need be, after some testing.  
-
-![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
 When you open your histogram and look at where the ranges are,  
 you may notice an image has highlights, but no shadows.  
