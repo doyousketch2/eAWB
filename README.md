@@ -1,5 +1,6 @@
 **awb.py**  
 Enhanced **A**uto **W**hite **B**alance for GIMP  
+Filters > Enhance > Auto White Balance  
 
 ---
 
@@ -7,6 +8,12 @@ Enhanced, because you can specify the amount you wish to clip.
 
 4 seems to be a good amount, but you can set it higher or lower,  
 if you prefer more, or less, filtering.  
+
+*Some images may need more aggressive filtering.*  
+
+If the color appears *off*, Undo,  
+look at histogram for each of the colors,  
+and decide if it needs more in the highlights or the shadows.  
 
 ![image](https://pbs.twimg.com/media/DTzLQn_WAAESxH9?format=jpg)  
 
