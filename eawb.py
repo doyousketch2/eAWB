@@ -69,27 +69,27 @@ def eawb( img, draw, hi, blow, lo, burn ):
   ##  back off a bit so we don't overshoot our target.
 
   if loR > 0:  ##  Red shadows
-    if elo:  loR  = loR //2
+    if burn:  loR  = loR //1.2
     else:    loR -= 1
 
   if hiR < 255:  ##  Red highlights
-    if ehi:  hiR  = 255 -(255 -hiR) //2
+    if blow:  hiR  = 255 -(255 -hiR) //1.5
     else:    hiR += 1
 
   if loG > 0:  ##  Green shadows
-    if elo:  loG  = loG //2
+    if burn:  loG  = loG //1.2
     else:    loG -= 1
 
   if hiG < 255:  ##  Green highlights
-    if ehi:  hiG  = 255 -(255 -hiG) //2
+    if blow:  hiG  = 255 -(255 -hiG) //1.5
     else:    hiG += 1
 
   if loB > 0:  ##  Blue shadows
-    if elo:  loB  = loB //2
+    if burn:  loB  = loB //1.2
     else:    loB -= 1
 
   if hiB < 255:  ##  Blue highlights
-    if ehi:  hiB  =  255 -(255 -hiB) //2
+    if blow:  hiB  =  255 -(255 -hiB) //1.5
     else:    hiB += 1
 
   ##  apply RGB levels
@@ -114,9 +114,9 @@ register (
         "*",             ##  image types
         [                            ##  default, (min, max, step)
           (PF_SLIDER, "hi",  "Highlight Clip", 6, (0, 50, 1) ),
-          (PF_TOGGLE, "blow", "Reduce blown Highlights", 0 ),
-          (PF_SLIDER, "lo",  "Shadow Clip", 10, (0, 50, 1) ),
-          (PF_TOGGLE, "burn", "Reduce burnt Shadows", 0 ),
+          (PF_TOGGLE, "blow", "Reduce blown Highlights", 1 ),
+          (PF_SLIDER, "lo",  "Shadow Clip", 30, (0, 50, 1) ),
+          (PF_TOGGLE, "burn", "Reduce burnt Shadows", 1 ),
         ],           ##  parameters
         [],         ##  results
         eawb )     ##  name of function
