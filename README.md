@@ -31,9 +31,10 @@ This will, of course, depend upon your camera, and the lighting,
 So you may have better results with some pix than others.  
 
 It might not cure images that have color bleeding in from another light source.  
-Can't promise any miricles with this plugin, but it may help.  
+Can't promise any miracles with this plugin, but it may help.  
+
 I've had good results with the test images I've thrown at it.  
-YMMV, but lemme know if you like it.  You can find me on Twitter @Doyousketch2.  
+YMMV, but lemme know if you like it; find me on Twitter @Doyousketch2.  
 
 It's possible to crank it all the way up to 50 if you like,  
 which will boost the contrast, but discard pixels  
