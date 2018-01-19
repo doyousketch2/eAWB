@@ -59,7 +59,7 @@ between the channels, then splitting the amount applied by half that value.
 Hopefully it helps.  I've seen good results with it.  
 But then again, how many million cameras are there in the world?  
 
-It'll 'prolly serve you well with 99.9% of the photos you throw at it.
+It'll 'prolly serve you well with 99.9% of the photos you throw at it.  
 But yeah, there's always gonna be that one pic that sux for whatever reason.  
 
 eAWB won't remedy everything, but it's default values are pretty good.  
