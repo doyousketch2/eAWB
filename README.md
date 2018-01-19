@@ -48,9 +48,22 @@ but keeps enough detail in the scene to be pleasing to the eye.
 
 Turning off the blown highlight and burnt shadow protection is allowed.  
 The results are more drastic, and if that's what you're going for,  
-by all means, try it.  But for everyday use, I'd recommend you keep it on.  
+by all means, try it.  But for everyday use, I'd recommend you keep 'em on.  
 
-You can also call eawb.py from another script,  
+Some photos have a huge difference between channels.  
+Perhaps a photo was shot with the wrong light balance to begin with.  
+
+*Soft tint* attempts to resolve this issue, by averaging the difference  
+between the channels, then splitting the amount applied by half that value.  
+
+Hopefully it helps.  I've seen good results with it.  
+But then again, how many million cameras are there in the world?  
+
+It'll 'prolly serve you well with 99.9% of the photos you throw at it.
+But yeah, there's always gonna be that one pic that sux for whatever reason.  
+
+eAWB won't remedy everything, but it's default values are pretty good.  
+And scriptable, so you can send an entire directory of photos at it.  
 which is a huge advantage over the awb that was built in.  
 
 from a Python plug-in, *aka* **python-fu**:  
