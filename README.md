@@ -85,7 +85,7 @@ Place script in directory that suits your OS:
   	C:\Documents and Settings\yourname\.gimp-2.8\plug-ins  
 
 If needed, *set file permissions to allow script execution:*  
-    `chmod +x awb.py`  
+    `chmod +x eawb.py`  
 
 If you have any previous versions of the script, awb.py  
 discard it, and replace with this updated eawb.py  
